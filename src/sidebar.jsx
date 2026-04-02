@@ -8,7 +8,7 @@ function Sidebar() {
 
   const getAllThreads = async () => {
     try {
-      const response = await fetch("http://ec2-13-60-211-68.eu-north-1.compute.amazonaws.com:5000/threads");
+      const response = await fetch("http://56.228.49.72:5000/threads");
       const data = await response.json();
       const filteredData = data.map(thread => ({ threadId: thread.threadId, title: thread.title }));
       setAllThreads(filteredData);
@@ -34,7 +34,7 @@ function Sidebar() {
   const changeThread = async (newThreadId) => {
     setCurrThreadId(newThreadId);
     try {
-      const response = await fetch(`http://ec2-13-60-211-68.eu-north-1.compute.amazonaws.com:5000/thread/${newThreadId}`);
+      const response = await fetch(`http://56.228.49.72:5000/thread/${newThreadId}`);
       const data = await response.json();
       console.log("data is ", data);
       console.log("and messages are ", data.messages);
@@ -50,7 +50,7 @@ function Sidebar() {
 
   const deleteThread = async (threadId) => {
     try {
-      const response = await fetch(`http://ec2-13-60-211-68.eu-north-1.compute.amazonaws.com:5000/thread/${threadId}`, {
+      const response = await fetch(`http://56.228.49.72:5000/thread/${threadId}`, {
         method: "DELETE"
       });
       const delThread = await response.json();
