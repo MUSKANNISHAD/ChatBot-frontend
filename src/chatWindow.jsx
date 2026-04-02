@@ -1,6 +1,6 @@
 import "./chatWindow.css";
 import Chat from "./chat.jsx";
-import { Mycontext } from "./Mycontext.jsx";
+import { MyContext } from "./MyContext.jsx";
 import { useContext, useEffect, useState } from "react";
 import { RingLoader } from "react-spinners";
 import toast from "react-hot-toast";
@@ -8,7 +8,7 @@ import { Toaster } from "react-hot-toast";
 
 
 function ChatWindow() {
-    const { prompt, setPrompt, reply, setReply, currThreadId, username, setUserName, setCurrThreadId, setNewChat, prevChats, setPrevChats } = useContext(Mycontext);
+    const { prompt, setPrompt, reply, setReply, currThreadId, username, setUserName, setCurrThreadId, setNewChat, prevChats, setPrevChats } = useContext(MyContext);
     const [isLoading, setIsLoading] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [flagShip, setFlagShip] = useState(false);
@@ -16,7 +16,7 @@ function ChatWindow() {
     const [password, setPassword] = useState("");
 
 
-    const { isLoggedIn, setIsLoggedIn } = useContext(Mycontext);
+    const { isLoggedIn, setIsLoggedIn } = useContext(MyContext);
     const [isSignup, setIsSignup] = useState(false);
     const [showLoginForm, setShowLoginForm] = useState(false);
     const [showSignUpForm, setShowSignUpForm] = useState(false);

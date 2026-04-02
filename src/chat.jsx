@@ -1,5 +1,5 @@
 import "./chat.css";
-import { Mycontext } from "./Mycontext";
+import { MyContext } from "./MyContext.jsx";
 import { useContext, useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
@@ -7,7 +7,7 @@ import "highlight.js/styles/github-dark.css";
 
 
 function Chat() {
-    const { newChat, prevChats, reply } = useContext(Mycontext);
+    const { newChat, prevChats, reply } = useContext(MyContext);
     const [latestReply, setLatestReply] = useState(null);
 
     useEffect(() => {

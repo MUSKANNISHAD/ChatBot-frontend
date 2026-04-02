@@ -1,7 +1,7 @@
 import "./App.css";
 import ChatWindow from "./chatWindow.jsx";
 import Sidebar from "./sidebar.jsx";
-import { MyProvider } from "./Mycontext.jsx";
+import { MyProvider } from "./MyContext.jsx";
 
 
 function App() {

@@ -1,10 +1,10 @@
 import "./sidebar.css";
 import { useContext, useEffect, useState } from "react";
-import { Mycontext } from "./Mycontext";
+import { MyContext } from "./MyContext.jsx";
 import { v1 as uuidv1 } from "uuid";
 
 function Sidebar() {
-  const { allThreads, setAllThreads, currThreadId, setNewChat, isLoggedIn, username, setUserName, setIsLoggedIn, setPrompt, setReply, setCurrThreadId, prevChats, setPrevChats } = useContext(Mycontext);
+  const { allThreads, setAllThreads, currThreadId, setNewChat, isLoggedIn, username, setUserName, setIsLoggedIn, setPrompt, setReply, setCurrThreadId, prevChats, setPrevChats } = useContext(MyContext);
 
   const getAllThreads = async () => {
     try {

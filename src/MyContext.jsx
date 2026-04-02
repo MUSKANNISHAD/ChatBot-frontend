@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { v1 as uuidv1 } from "uuid";
 
-export const Mycontext = createContext();
+export const MyContext = createContext();
 
 export const MyProvider = ({ children }) => {
 
@@ -15,7 +15,7 @@ export const MyProvider = ({ children }) => {
     const [username, setUserName] = useState("");
 
     return (
-        <Mycontext.Provider
+        <MyContext.Provider
             value={{
                 prompt, setPrompt,
                 reply, setReply,
@@ -29,6 +29,6 @@ export const MyProvider = ({ children }) => {
             }}
         >
             {children}
-        </Mycontext.Provider>
+        </MyContext.Provider>
     );
 };
