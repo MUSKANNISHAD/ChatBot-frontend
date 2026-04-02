@@ -31,7 +31,7 @@ function ChatWindow() {
         setPrompt("");
 
 
-        const response = await fetch("http://ec2-13-60-211-68.eu-north-1.compute.amazonaws.com/chat", {
+        const response = await fetch("http://ec2-13-60-211-68.eu-north-1.compute.amazonaws.com:5000/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
