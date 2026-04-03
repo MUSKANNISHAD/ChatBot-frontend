@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
 
 
-function ChatWindow() {
+function ChatWindow({ setShowSidebar }) {
     const { prompt, setPrompt, reply, setReply, currThreadId, username, setUserName, setCurrThreadId, setNewChat, prevChats, setPrevChats } = useContext(MyContext);
     const [isLoading, setIsLoading] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -175,6 +175,12 @@ function ChatWindow() {
             }}
                 className="chatWindow" >
                 <div className="navbar">
+                    <div
+                        className="close-sidebar"
+                        onClick={() => setShowSidebar(prev => !prev)}
+                    >
+                        <i className="fa-solid fa-bars"></i>
+                    </div>
                     <div id="update" onClick={changeflagShip}>
                         <h3 style={{ paddingLeft: "1rem" }}>ChatBox </h3> &nbsp; &nbsp;
                         <h4 className="Auto">Auto  <i className="fa-solid fa-chevron-down"></i></h4>

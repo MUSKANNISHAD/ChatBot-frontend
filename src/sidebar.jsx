@@ -3,7 +3,10 @@ import { useContext, useEffect, useState } from "react";
 import { MyContext } from "./MyContext.jsx";
 import { v1 as uuidv1 } from "uuid";
 
-function Sidebar() {
+// function Sidebar() {
+// function Sidebar({ showSidebar }) {
+function Sidebar({ showSidebar, setShowSidebar }) {
+
   const { allThreads, setAllThreads, currThreadId, setNewChat, isLoggedIn, username, setUserName, setIsLoggedIn, setPrompt, setReply, setCurrThreadId, prevChats, setPrevChats } = useContext(MyContext);
 
   const getAllThreads = async () => {
@@ -69,7 +72,10 @@ function Sidebar() {
 
 
   return (
-    <section className="sidebar">
+    <section className={`sidebar ${showSidebar ? "" : "hidden"}`}>
+      <div className="close-sidebar" onClick={() => setShowSidebar(false)}>
+        <i className="fa-solid fa-xmark"></i>
+      </div>
       <button className="btn" onClick={startNewChat}>
         <i className="fa-brands fa-openai "></i>
         {/* <img src="/src/assets/blacklogo.png" alt="ChatGPT Logo" className="Smile" /> */}
