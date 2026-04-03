@@ -330,7 +330,7 @@ input:focus {
 @media (max-width:770px) {
     .inputBox {
         width: 80%;
-        border-radius: 20px;
+        border-radius: 19px;
     }
 
 }
