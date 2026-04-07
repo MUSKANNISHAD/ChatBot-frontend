@@ -299,7 +299,7 @@ function ChatWindow({ setShowSidebar }) {
 
                 <div className="chatInput">
                     <div className="inputBox">
-                        <input placeholder="Ask anything"
+                        <input placeholder="You can ask here"
                             disabled={showLoginForm}
                             value={prompt}
                             onChange={(e) => setPrompt(e.target.value)}
