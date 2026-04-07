@@ -31,7 +31,7 @@ function ChatWindow({ setShowSidebar }) {
         setPrompt("");
 
 
-        const response = await fetch("http://ec2-56-228-49-72.eu-north-1.compute.amazonaws.com:5000/chat", {
+        const response = await fetch("http://56.228.49.72:5000/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -70,7 +70,7 @@ function ChatWindow({ setShowSidebar }) {
 
     const logOut = async () => {
         const token = localStorage.getItem("token");
-        const logout = await fetch("http://ec2-56-228-49-72.eu-north-1.compute.amazonaws.com:5000/logout", {
+        const logout = await fetch("http://56.228.49.72:5000/logout", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -101,7 +101,7 @@ function ChatWindow({ setShowSidebar }) {
     const signup = async (e) => {
         e.preventDefault();
 
-        const response = await fetch("http://ec2-56-228-49-72.eu-north-1.compute.amazonaws.com:5000/thread/signUp", {
+        const response = await fetch("http://56.228.49.72:5000/thread/signUp", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -134,7 +134,7 @@ function ChatWindow({ setShowSidebar }) {
     const login = async (e) => {
         e.preventDefault();
 
-        const loginUser = await fetch("http://ec2-56-228-49-72.eu-north-1.compute.amazonaws.com:5000/thread/login", {
+        const loginUser = await fetch("http://56.228.49.72:5000/thread/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
