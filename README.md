@@ -18,4 +18,4 @@ This is the frontend of an AI-powered chat application similar to ChatGPT.
 http://56.228.49.72
 
 ## Backend Repository
-https://github.com/MUSKANNISHAD/My_chat_app
+https://github.com/MUSKANNISHAD/chatbot-backend
