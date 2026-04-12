@@ -11,7 +11,7 @@ function Sidebar({ showSidebar, setShowSidebar }) {
 
   const getAllThreads = async () => {
     try {
-      const response = await fetch("https://stayhub-chat.duckdns.org/threads");
+      const response = await fetch("/api/threads");
       const data = await response.json();
       const filteredData = data.map(thread => ({ threadId: thread.threadId, title: thread.title }));
       setAllThreads(filteredData);
@@ -37,7 +37,7 @@ function Sidebar({ showSidebar, setShowSidebar }) {
   const changeThread = async (newThreadId) => {
     setCurrThreadId(newThreadId);
     try {
-      const response = await fetch(`https://stayhub-chat.duckdns.org/thread/${newThreadId}`);
+      const response = await fetch(`/api/thread/${newThreadId}`);
       const data = await response.json();
       console.log("data is ", data);
       console.log("and messages are ", data.messages);
@@ -53,7 +53,7 @@ function Sidebar({ showSidebar, setShowSidebar }) {
 
   const deleteThread = async (threadId) => {
     try {
-      const response = await fetch(`https://stayhub-chat.duckdns.org/thread/${threadId}`, {
+      const response = await fetch(`/api/thread/${threadId}`, {
         method: "DELETE"
       });
       const delThread = await response.json();
