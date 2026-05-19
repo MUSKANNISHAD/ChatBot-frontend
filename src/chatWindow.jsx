@@ -31,7 +31,7 @@ function ChatWindow({ setShowSidebar }) {
         setPrompt("");
 
 
-        const response = await fetch("/api/chat", {
+        const response = await fetch("https://chatbot-backend-tm7h.onrender.com/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -71,7 +71,7 @@ function ChatWindow({ setShowSidebar }) {
 
     const logOut = async () => {
         const token = localStorage.getItem("token");
-        const logout = await fetch("/api/logout", {
+        const logout = await fetch("https://chatbot-backend-tm7h.onrender.com/logout", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -102,7 +102,7 @@ function ChatWindow({ setShowSidebar }) {
     const signup = async (e) => {
         e.preventDefault();
 
-        const response = await fetch("/api/thread/signUp", {
+        const response = await fetch("https://chatbot-backend-tm7h.onrender.com/thread/signUp", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -135,7 +135,7 @@ function ChatWindow({ setShowSidebar }) {
     const login = async (e) => {
         e.preventDefault();
 
-        const loginUser = await fetch("/api/thread/login", {
+        const loginUser = await fetch("https://chatbot-backend-tm7h.onrender.com/thread/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
