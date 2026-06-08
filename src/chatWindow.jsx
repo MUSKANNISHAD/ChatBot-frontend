@@ -113,7 +113,7 @@ function ChatWindow({ setShowSidebar }) {
                 password
             })
         });
-       
+
         if (response.status === 500) {
             toast.error("Internal server error");
             console.log("responce is ", response);
@@ -184,7 +184,7 @@ function ChatWindow({ setShowSidebar }) {
                         <i className="fa-solid fa-bars"></i>
                     </div>
                     <div id="update" onClick={changeflagShip}>
-                        <h3 style={{ paddingLeft: "1rem" }}>ChatBox </h3> &nbsp; &nbsp;
+                        <h3 style={{ paddingLeft: "1rem" }}>Conversational AI </h3> &nbsp; &nbsp;
                         <h4 className="Auto">Auto  <i className="fa-solid fa-chevron-down"></i></h4>
                     </div>
                     <div className="userIconDiv" onClick={changeDropDown} >
@@ -197,8 +197,8 @@ function ChatWindow({ setShowSidebar }) {
                 {
                     flagShip ? (
                         <div className="hoverEffect">
-                            <div className="flagship">ChatGpt Plus<span className="upgrade">upgrade</span></div>
-                            <div className="flagship">GPT-5.3 <i className="fa-solid fa-check"></i></div>
+                            <div className="flagship">AI Plus<span style={{display:"flex",justifyContent:"center",alignItems:"center"}} className="upgrade">upgrade</span></div>
+                            <div className="flagship">model-AI <i className="fa-solid fa-check"></i></div>
                         </div>
                     ) : undefined
                 }
@@ -312,7 +312,7 @@ function ChatWindow({ setShowSidebar }) {
                         <div id="submit" onClick={getReply} ><i className="fa-solid fa-paper-plane"></i></div>
                     </div>
                     <p className="info">
-                        ChatBox can make mistakes. Check important info. See <span className="link">Cookie Preferences</span>.
+                        AI-generated responses may contain inaccuracies. Please verify important information. See <span className="link">Cookie Preferences</span>.
                     </p>
                 </div>
             </div >
