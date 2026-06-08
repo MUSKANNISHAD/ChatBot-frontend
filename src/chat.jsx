@@ -54,7 +54,7 @@ function Chat() {
                         </div>
                     )
                 }
-                {
+                {/* {
                     prevChats?.length > 0 && (
                         <>
                             {latestReply === null ? (
@@ -76,7 +76,7 @@ function Chat() {
                             )}
                         </>
                     )
-                }
+                } */}
             </div>
         </>
     )

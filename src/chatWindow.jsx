@@ -113,6 +113,7 @@ function ChatWindow({ setShowSidebar }) {
                 password
             })
         });
+       
         if (response.status === 500) {
             toast.error("Internal server error");
             console.log("responce is ", response);
