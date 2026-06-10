@@ -15,7 +15,7 @@ This is the frontend of an AI-powered chat application similar to ChatGPT.
 - Integrated with Node.js backend
 
 ## Live Demo
-http://56.228.49.72
+https://chat-bot-frontend-virid.vercel.app/
 
 ## Backend Repository
 https://github.com/MUSKANNISHAD/chatbot-backend
